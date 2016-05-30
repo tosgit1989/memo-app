@@ -1,0 +1,9 @@
+<%= form_for @memo, remote: true do |f| %>
+  <%= f.text_field :text1 %>
+  <%= f.text_field :text2 %>
+  <%= f.text_field :text3 %>
+  <%= f.submit '投稿' %>
+<% end %>
+<ul>
+  <%= render @memos %>
+</ul>

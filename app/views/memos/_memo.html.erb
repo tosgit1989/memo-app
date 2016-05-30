@@ -1,0 +1,5 @@
+<li>
+  <p>投稿したメモ</p>
+  <%= memo.text1 %> <%= memo.text2 %> <%= memo.text3 %>
+  <%= link_to '削除', memo_path(memo), method: :delete, remote: true %>
+</li>

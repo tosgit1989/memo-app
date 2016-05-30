@@ -1,5 +1,7 @@
-def hello
-  p "hello, world."
+def hello(word)
+  puts "#{word}"
 end
 
-p "hello"
+worn = "Let's"
+woln = worn.gsub(/'/,"Tel")
+hello(woln)

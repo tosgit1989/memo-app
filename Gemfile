@@ -49,4 +49,11 @@ group :development do
 
   gem 'binding_of_caller'
 end
-
+group :production, :staging do
+  gem 'unicorn'
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
+end

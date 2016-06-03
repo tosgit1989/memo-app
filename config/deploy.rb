@@ -22,7 +22,7 @@ set :deploy_to, '/var/www/memo-app'
 # set :format_options, command_output: true, log_file: 'log/capistrano.log', color: :auto, truncate: :auto
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, true
 
 # Default value for :linked_files is []
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
@@ -36,6 +36,8 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 # Default value for keep_releases is 5
 set :keep_releases, 5
 set :rbenv_ruby, '2.3.1'
+set :rbenv_path, '~/.rbenv'
+set :bundle_env_variables, { nokogiri_use_system_libraries: 1 }
 
 namespace :deploy do
   desc 'Restart application'
